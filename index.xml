@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>You don't start out writing good stuff on Jeza's Brain Space 0.0.1</title><link>/</link><description>Recent content in You don't start out writing good stuff on Jeza's Brain Space 0.0.1</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Install Hugo</title><link>/docs/install-hugo/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/install-hugo/</guid><description>&lt;p>To use this theme you will need to have Hugo installed. If you don&amp;rsquo;t already have Hugo installed please follow the official &lt;a href="https://gohugo.io/getting-started/installing/">installation guide&lt;/a>&lt;/p>
+&lt;h3 id="check-hugo-version">Check Hugo Version&lt;/h3>
+&lt;p>This theme uses &lt;a href="https://gohugo.io/hugo-pipes/scss-sass/">Hugo Pipes&lt;/a> to compile SCSS and minify assets. Please make sure you have the &lt;code>Hugo Extended&lt;/code> version installed. If you are not using the extended version this theme will not not compile.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Install Theme</title><link>/docs/install-theme/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/install-theme/</guid><description>&lt;h2 id="create-a-new-hugo-site">Create a new Hugo site&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo new site mynewsite
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will create a fresh Hugo site in the folder &lt;code>mynewsite&lt;/code>.&lt;/p>
+&lt;h2 id="install-theme">Install theme&lt;/h2>
+&lt;p>Copy or git clone this theme into the sites themes folder &lt;code>mynewsite/themes&lt;/code>&lt;/p>
+&lt;h4 id="install-with-git">Install with Git&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd mynewsite
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cd themes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git clone https://github.com/jugglerx/hugo-whisper-theme.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="install-from-zip-file">Install from .zip file&lt;/h4>
+&lt;p>You can download the .zip file located here &lt;a href="https://github.com/JugglerX/hugo-whisper-theme/archive/master.zip">https://github.com/JugglerX/hugo-whisper-theme/archive/master.zip&lt;/a>.&lt;/p>
+&lt;p>Extract the downloaded .zip inside the &lt;code>themes&lt;/code> folder. Rename the extracted folder from &lt;code>hugo-whisper-theme-master&lt;/code> -&amp;gt; &lt;code>hugo-whisper-theme&lt;/code>. You should end up with the following folder structure &lt;code>mynewsite/themes/hugo-whisper-theme&lt;/code>&lt;/p></description></item><item><title>Configuration</title><link>/docs/configure/</link><pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate><guid>/docs/configure/</guid><description>Syntax highlighting and menus can be configured via &lt;code>config.toml&lt;/code>.</description></item><item><title>Specimen</title><link>/docs/specimen/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/specimen/</guid><description>&lt;h1 id="a-nametopamarkdown-test-page">&lt;a name="top">&lt;/a>Markdown Test Page&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="#Headings">Headings&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Paragraphs">Paragraphs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Blockquotes">Blockquotes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Lists">Lists&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Horizontal">Horizontal rule&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Table">Table&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Code">Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Inline">Inline elements&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="a-nameheadingsaheadings">&lt;a name="Headings">&lt;/a>Headings&lt;/h1>
+&lt;h1 id="heading-one">Heading one&lt;/h1>
+&lt;p>Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem.&lt;/p>
+&lt;h2 id="heading-two">Heading two&lt;/h2>
+&lt;p>Aute officia nulla deserunt do deserunt cillum velit magna. Officia veniam culpa anim minim dolore labore pariatur voluptate id ad est duis quis velit dolor pariatur enim. Incididunt enim excepteur do veniam consequat culpa do voluptate dolor fugiat ad adipisicing sit.&lt;/p></description></item><item><title>Hugo Whisper</title><link>/docs/example/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/example/</guid><description>&lt;p>Whisper is a minimal documentation theme built for Hugo. The design &amp;amp; functionality is intentionally minimal.&lt;/p></description></item><item><title>Joplin Publisher | Joplin Utils</title><link>/posts/4e9a8858bd25484285a1ec6e84be49bd/</link><pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate><guid>/posts/4e9a8858bd25484285a1ec6e84be49bd/</guid><description>&lt;p>&lt;a href="https://joplin-utils.rxliuli.com/en-US/joplin-publisher/">https://joplin-utils.rxliuli.com/en-US/joplin-publisher/&lt;/a>&lt;/p>
+&lt;p>I thought the only way to write and publish articles on Medium would be through blogging platforms or solutions like Hugo static site generators. However, since I&amp;rsquo;ve been using the Joplin app for some time now, I&amp;rsquo;ve been wondering if there might be a way to publish directly from Joplin to GitHub and then, possibly, to Medium through actions. This seems like a solid solution, especially considering there&amp;rsquo;s a plugin developed by the user RXliuli that fits the use case well. All I need to do is find an action that can utilize any existing Medium API for publishing.&lt;/p></description></item><item><title>The revolution will be complete when the language is perfect</title><link>/posts/language-perfect/</link><pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate><guid>/posts/language-perfect/</guid><description>&lt;h2 id="he-moved-over-to-the-window">He moved over to the window&lt;/h2>
+&lt;p>Since about that time, war had been literally continuous, though strictly speaking it had not always been the same war. For several months during his childhood there had been confused street fighting in London itself, some of which he remembered vividly.&lt;/p>
+&lt;p>Inside the flat a fruity voice was reading out a list of figures which had something to do with the production of pig iron. The voice came from an oblong metal plaque like a dulled mirror which formed part of the surface of the right-hand wall. Winston turned a switch and the voice sank somewhat, though the words were still distinguishable. The instrument (the telescreen, it was called) could be dimmed) but there was no way of shutting it off completely.&lt;/p></description></item><item><title>Sanity is not statistical</title><link>/posts/sanity-not-statistical/</link><pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate><guid>/posts/sanity-not-statistical/</guid><description>&lt;h2 id="there-was-no-way-of-knowing-whose-version-would-finally-be-adopted">There was no way of knowing whose version would finally be adopted&lt;/h2>
+&lt;p>Once again he glanced at his rival in the opposite cubicle. Something seemed to tell him with certainty that Tillotson was busy on the same job as himself. There was no way of knowing whose version would finally be adopted, but he felt a profound conviction that it would be his own&lt;/p>
+&lt;h2 id="mare-torrentur">Mare torrentur&lt;/h2>
+&lt;p>Mare torrentur tenuerunt Iovemque crudelis erat non manuque nullaque Pyreneus,
+evocet pectus, &lt;em>nube&lt;/em>. In templo taedia &lt;a href="#dat">socerumque moenibus&lt;/a> alter sic
+regina pulchra rexerat. Corbe est et, &lt;strong>invectae&lt;/strong> pariter ignara quod senes:
+sectus his tamen. Hora graves iam prospiciunt, subito spargit germanam &lt;em>utve&lt;/em>,
+inmeritas frontemque tempora. Frustra stratosque possim trepidare squamis, os,
+tum ipse prodesse acuta Phobetora e viscera, munera!&lt;/p></description></item><item><title>It's a beautiful thing, the destruction of words</title><link>/posts/destruction-of-words/</link><pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate><guid>/posts/destruction-of-words/</guid><description>&lt;h1 id="he-moved-over-to-the-window">He moved over to the window&lt;/h1>
+&lt;p>Lorem markdownum comes; pro est &lt;a href="#pervenerat">modo famulus&lt;/a>, quo quod neu
+manibus aether his nomine, Aurora, voce. Ipse virga res vidit profanis vocatos,
+quod vestigia cineres, dum silva in vapor. Tendite caelestibus quam, sub inplet
+prole eveniet &lt;strong>superi&lt;/strong> rus proles venenis potestas Tereo pluribus sunto.&lt;/p>
+&lt;p>Perque cessisse, hoc tum auras sinuosa. Pressant nec vinci primoque quoque
+funibus est: et tempore vetitorum? Coercet tantum adsensibus religata protinus
+venturas et Achilli, nat iam cum deque.&lt;/p></description></item><item><title>Who controls the past controls the future. Who controls the present controls the past</title><link>/posts/controls-the-past/</link><pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate><guid>/posts/controls-the-past/</guid><description>&lt;h2 id="he-moved-over-to-the-window">He moved over to the window&lt;/h2>
+&lt;p>Since about that time, war had been literally continuous, though strictly speaking it had not always been the same war. For several months during his childhood there had been confused street fighting in London itself, some of which he remembered vividly.&lt;/p>
+&lt;p>Inside the flat a fruity voice was reading out a list of figures which had something to do with the production of pig iron. The voice came from an oblong metal plaque like a dulled mirror which formed part of the surface of the right-hand wall. Winston turned a switch and the voice sank somewhat, though the words were still distinguishable. The instrument (the telescreen, it was called) could be dimmed) but there was no way of shutting it off completely.&lt;/p></description></item><item><title>About</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description>&lt;h2 id="contra-vagos">Contra vagos&lt;/h2>
+&lt;p>Lorem &lt;em>markdownum notam si&lt;/em> lintea meque certa &lt;a href="#cohibentem-iuvenaliter">en meumque
+illis&lt;/a>, diu fatigant, nec praedae concustodita arcet.
+&lt;a href="#nemorisque-urimur-violentus">Paviunt castris&lt;/a> cur errat ventis causa! Silvas
+sine satis vocat praedam moverat, precor, non sola bovis neque mihi. Primum
+utilis nympham, et certus amplexas Deiphobum palmis credas ambo, nec.&lt;/p>
+&lt;blockquote>
+&lt;p>Excidit gente, si orat suo quaeque dura Calydon nata? Pars auro post stetit
+adfusique imis amplexus. Agmina per fabricator
+mittere Erymanthon habetque tot.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>Cineres Nile ipsa&lt;/strong> origine discurrunt adest Unde, et quem clausus, imo,
+virens quoque tales, potuit. Ingentes insilit corpore nutricis praebebat roganti
+licuit. Denique a vestros adulantum in bella lina parte et arte generi di igitur
+quis, digitis pedes. Cum resonant tamen, namque in anxia. Non nostri trahens
+ancora.&lt;/p></description></item></channel></rss>

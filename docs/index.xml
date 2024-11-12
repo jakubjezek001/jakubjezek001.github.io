@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Overview on Jeza's Brain Space 0.0.1</title><link>/docs/</link><description>Recent content in Overview on Jeza's Brain Space 0.0.1</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 11 Feb 2019 19:30:08 +1000</lastBuildDate><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Install Hugo</title><link>/docs/install-hugo/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/install-hugo/</guid><description>&lt;p>To use this theme you will need to have Hugo installed. If you don&amp;rsquo;t already have Hugo installed please follow the official &lt;a href="https://gohugo.io/getting-started/installing/">installation guide&lt;/a>&lt;/p>
+&lt;h3 id="check-hugo-version">Check Hugo Version&lt;/h3>
+&lt;p>This theme uses &lt;a href="https://gohugo.io/hugo-pipes/scss-sass/">Hugo Pipes&lt;/a> to compile SCSS and minify assets. Please make sure you have the &lt;code>Hugo Extended&lt;/code> version installed. If you are not using the extended version this theme will not not compile.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Install Theme</title><link>/docs/install-theme/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/install-theme/</guid><description>&lt;h2 id="create-a-new-hugo-site">Create a new Hugo site&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo new site mynewsite
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will create a fresh Hugo site in the folder &lt;code>mynewsite&lt;/code>.&lt;/p>
+&lt;h2 id="install-theme">Install theme&lt;/h2>
+&lt;p>Copy or git clone this theme into the sites themes folder &lt;code>mynewsite/themes&lt;/code>&lt;/p>
+&lt;h4 id="install-with-git">Install with Git&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd mynewsite
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cd themes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git clone https://github.com/jugglerx/hugo-whisper-theme.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="install-from-zip-file">Install from .zip file&lt;/h4>
+&lt;p>You can download the .zip file located here &lt;a href="https://github.com/JugglerX/hugo-whisper-theme/archive/master.zip">https://github.com/JugglerX/hugo-whisper-theme/archive/master.zip&lt;/a>.&lt;/p>
+&lt;p>Extract the downloaded .zip inside the &lt;code>themes&lt;/code> folder. Rename the extracted folder from &lt;code>hugo-whisper-theme-master&lt;/code> -&amp;gt; &lt;code>hugo-whisper-theme&lt;/code>. You should end up with the following folder structure &lt;code>mynewsite/themes/hugo-whisper-theme&lt;/code>&lt;/p></description></item><item><title>Configuration</title><link>/docs/configure/</link><pubDate>Mon, 11 Feb 2019 19:30:08 +1000</pubDate><guid>/docs/configure/</guid><description>Syntax highlighting and menus can be configured via &lt;code>config.toml&lt;/code>.</description></item><item><title>Specimen</title><link>/docs/specimen/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/specimen/</guid><description>&lt;h1 id="a-nametopamarkdown-test-page">&lt;a name="top">&lt;/a>Markdown Test Page&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="#Headings">Headings&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Paragraphs">Paragraphs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Blockquotes">Blockquotes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Lists">Lists&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Horizontal">Horizontal rule&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Table">Table&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Code">Code&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#Inline">Inline elements&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="a-nameheadingsaheadings">&lt;a name="Headings">&lt;/a>Headings&lt;/h1>
+&lt;h1 id="heading-one">Heading one&lt;/h1>
+&lt;p>Sint sit cillum pariatur eiusmod nulla pariatur ipsum. Sit laborum anim qui mollit tempor pariatur nisi minim dolor. Aliquip et adipisicing sit sit fugiat commodo id sunt. Nostrud enim ad commodo incididunt cupidatat in ullamco ullamco Lorem cupidatat velit enim et Lorem.&lt;/p>
+&lt;h2 id="heading-two">Heading two&lt;/h2>
+&lt;p>Aute officia nulla deserunt do deserunt cillum velit magna. Officia veniam culpa anim minim dolore labore pariatur voluptate id ad est duis quis velit dolor pariatur enim. Incididunt enim excepteur do veniam consequat culpa do voluptate dolor fugiat ad adipisicing sit.&lt;/p></description></item><item><title>Hugo Whisper</title><link>/docs/example/</link><pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate><guid>/docs/example/</guid><description>&lt;p>Whisper is a minimal documentation theme built for Hugo. The design &amp;amp; functionality is intentionally minimal.&lt;/p></description></item></channel></rss>
