@@ -101,13 +101,13 @@ hugo server --source=exampleSite --theme=../..
   sortPostsByDateOldestFirst = false
   addDot = true
   addFrame = true
-  highlightColor = '#7b16ff'
+  highlightColor = '#1de9b6'
   baseColor = "#ffffff"
   baseOffsetColor = "#eaeaea"
   headingColor = "#1c1b1d"
   textColor = "#4e5157"
-  dotColor = "#7b16ff"
-  enableGoogleFonts = true 
+  dotColor = "#1de9b6"
+  enableGoogleFonts = true
   googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
   fontFamilyHeading = "Poppins"
   fontFamilyParagraph = "Helvetica"
