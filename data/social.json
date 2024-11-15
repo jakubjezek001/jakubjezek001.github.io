@@ -1,19 +1,24 @@
 {
   "links": [
     {
-      "name": "twitter",
-      "url": "https://twitter.com/zerostaticio",
-      "image": "images/social/twitter.svg"
+      "name": "X",
+      "url": "https://x.com/JakubJezek3",
+      "image": "images/social/x.svg"
     },
     {
       "name": "github",
-      "url": "https://github.com/zerostaticthemes/hugo-winston-theme",
+      "url": "https://github.com/jakubjezek001",
       "image": "images/social/github.svg"
     },
     {
       "name": "linkedin",
-      "url": "https://www.linkedin.com",
+      "url": "https://www.linkedin.com/in/jakubjezek79",
       "image": "images/social/linkedin.svg"
+    },
+    {
+      "name": "medium",
+      "url": "https://medium.com/@jakubjezek001",
+      "image": "images/social/medium.svg"
     }
   ]
 }

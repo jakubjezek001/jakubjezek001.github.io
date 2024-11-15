@@ -2,3 +2,9 @@
 themes/hugo-whisper-theme/
 
 public/
+
+python/.env
+
+python/.python-version
+
+python/.venv/

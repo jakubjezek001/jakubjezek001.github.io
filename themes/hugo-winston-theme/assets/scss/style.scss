@@ -4,10 +4,10 @@
   --font-family-monospace: {{ .Site.Params.fontFamilyMonospace | default "monospace" }};
   --base-color: {{ .Site.Params.baseColor | default "#ffffff" }};
   --base-offset-color: {{ .Site.Params.baseOffsetColor | default "#eaeaea" }};
-  --highlight-color: {{ .Site.Params.highlightColor | default "#7b16ff" }};
+  --highlight-color: {{ .Site.Params.highlightColor | default "#1de9b6" }};
   --heading-color: {{ .Site.Params.headingColor | default "#1c1b1d" }};
   --text-color: {{ .Site.Params.textColor | default "#4e5157" }};
-  --dot-color: {{ .Site.Params.dotColor | default "#7b16ff" }};
+  --dot-color: {{ .Site.Params.dotColor | default "#1de9b6" }};
 }
 
 $breakpoints: (

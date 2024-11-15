@@ -4,10 +4,10 @@
   --font-family-monospace: monospace;
   --base-color: #ffffff;
   --base-offset-color: #eaeaea;
-  --highlight-color: #7b16ff;
+  --highlight-color: #1de9b6;
   --heading-color: #1c1b1d;
   --text-color: #4e5157;
-  --dot-color: #7b16ff; }
+  --dot-color: #1de9b6; }
 
 body, html {
   margin: 0;
@@ -29,7 +29,7 @@ h1, h2, h3 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  font-size: 16px; }
+  font-size: 20px; }
   @media (min-width: 767px) {
     .header {
       padding-bottom: 5px;
