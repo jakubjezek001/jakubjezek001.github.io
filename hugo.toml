@@ -15,8 +15,8 @@ pygmentsUseClasses = true
 [params]
   google_analytics_id = ""
   twitter_handle = "@JakubJezek3"
-  showAuthorOnHomepage = false
-  showAuthorOnPosts = true
+  showAuthorOnHomepage = true
+  showAuthorOnPosts = false
   # showIntroContentOnHomepage = true
   showPostsOnHomepage = true
   usePaginationOnHomepage = false
@@ -35,6 +35,10 @@ pygmentsUseClasses = true
   fontFamilyHeading = "Poppins"
   fontFamilyParagraph = "Helvetica"
   fontFamilyMonospace = "monospace"
+
+  [params.logo]
+    mobile = "/images/logo-mobile.svg"
+    standard  = "/images/logo.svg"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
