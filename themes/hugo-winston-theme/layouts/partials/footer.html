@@ -8,9 +8,9 @@
         </a>
       </span>
     {{ end }}
+    {{ with .Site.Params.footer.copyright_text }}
+    <span class="copyright">{{ . | safeHTML }}</span>
+    {{ end }}
   </div>
-  {{ end }}
-  {{ with .Site.Params.footer.copyright_text }}
-  <div class="copyright">{{ . | safeHTML }}</div>
   {{ end }}
 </div>
