@@ -10,4 +10,7 @@
     {{ end }}
   </div>
   {{ end }}
+  {{ with .Site.Params.footer.copyright_text }}
+  <div class="copyright">{{ . | safeHTML }}</div>
+  {{ end }}
 </div>

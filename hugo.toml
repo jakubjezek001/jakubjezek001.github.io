@@ -13,7 +13,7 @@ pygmentsUseClasses = true
     min = "0.55.0"
 
 [params]
-  google_analytics_id = ""
+  google_analytics_id = "G-4F82JRJHEG"
   twitter_handle = "@JakubJezek3"
   showAuthorOnHomepage = true
   showAuthorOnPosts = false
@@ -36,6 +36,9 @@ pygmentsUseClasses = true
   fontFamilyParagraph = "Helvetica"
   fontFamilyMonospace = "monospace"
 
+  [params.footer]
+    copyright_text = "© 2024 Jakub Jezek"
+
   [params.logo]
     mobile = "/images/logo-mobile.svg"
     standard  = "/images/logo.svg"
@@ -54,11 +57,11 @@ pygmentsUseClasses = true
     name = 'Home'
     url = '/'
     weight = 1
-  [[menu.main]]
-    name = "Projects"
-    identifier = "projects"
-    weight = 2
-    url = "/projects/"
+  # [[menu.main]]
+  #   name = "Projects"
+  #   identifier = "projects"
+  #   weight = 2
+  #   url = "/projects/"
   [[menu.main]]
     name = "Blog"
     identifier = "blog"
