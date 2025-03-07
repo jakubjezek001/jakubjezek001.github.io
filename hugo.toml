@@ -1,79 +1,79 @@
 baseURL = "/"
 theme = "hugo-winston-theme"
 languageCode = "en-us"
-title = "BrainSpace 0.1.1"
+title = "The Streamlighter"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
 
 [module]
-  [module.hugoVersion]
-    extended = true
-    min = "0.55.0"
+[module.hugoVersion]
+extended = true
+min = "0.55.0"
 
 [params]
-  google_analytics_id = "G-4F82JRJHEG"
-  twitter_handle = "@JakubJezek3"
-  showAuthorOnHomepage = true
-  showAuthorOnPosts = false
-  # showIntroContentOnHomepage = true
-  showPostsOnHomepage = true
-  usePaginationOnHomepage = false
-  limitPostsOnHomepage = 2 # only used if usePaginationOnHomepage is false
-  sortPostsByDateOldestFirst = false
-  addDot = true
-  addFrame = false
-  highlightColor = '#1de9b6'
-  baseColor = "#ffffff"
-  baseOffsetColor = "#eaeaea"
-  headingColor = "#1c1b1d"
-  textColor = "#4e5157"
-  dotColor = "#1de9b6"
-  enableGoogleFonts = true
-  googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-  fontFamilyHeading = "Poppins"
-  fontFamilyParagraph = "Helvetica"
-  fontFamilyMonospace = "monospace"
+google_analytics_id = "G-NV1RQJ2KCZ"
+twitter_handle = "@JakubJezek3"
+showAuthorOnHomepage = true
+showAuthorOnPosts = false
+# showIntroContentOnHomepage = true
+showPostsOnHomepage = true
+usePaginationOnHomepage = false
+limitPostsOnHomepage = 2                                                                      # only used if usePaginationOnHomepage is false
+sortPostsByDateOldestFirst = false
+addDot = true
+addFrame = false
+highlightColor = '#1de9b6'
+baseColor = "#ffffff"
+baseOffsetColor = "#eaeaea"
+headingColor = "#1c1b1d"
+textColor = "#4e5157"
+dotColor = "#1de9b6"
+enableGoogleFonts = true
+googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+fontFamilyHeading = "Poppins"
+fontFamilyParagraph = "Helvetica"
+fontFamilyMonospace = "monospace"
 
-  [params.footer]
-    copyright_text = "© 2024 Jakub Jezek"
+[params.footer]
+copyright_text = "© 2024 Jakub Jezek"
 
-  [params.logo]
-    mobile = "/images/logo-mobile.svg"
-    standard  = "/images/logo.svg"
+[params.logo]
+mobile = "/images/logo-mobile.svg"
+standard = "/images/logo.svg"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      hardWraps = false
-      unsafe = true
-      xhtml = false
+[markup.goldmark]
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe = true
+xhtml = false
 
 [menu]
-  [[menu.main]]
-    identifier = 'home'
-    name = 'Home'
-    url = '/'
-    weight = 1
-  # [[menu.main]]
-  #   name = "Projects"
-  #   identifier = "projects"
-  #   weight = 2
-  #   url = "/projects/"
-  [[menu.main]]
-    name = "Blog"
-    identifier = "blog"
-    weight = 3
-    url = "/posts/"
-  [[menu.main]]
-    name = "About"
-    identifier = "about"
-    weight = 4
-    url = "/About/"
-  [[menu.main]]
-    name = "Tags"
-    identifier = "tags"
-    weight = 5
-    url = "/tags/"
+[[menu.main]]
+identifier = 'home'
+name = 'Home'
+url = '/'
+weight = 1
+# [[menu.main]]
+#   name = "Projects"
+#   identifier = "projects"
+#   weight = 2
+#   url = "/projects/"
+[[menu.main]]
+name = "Blog"
+identifier = "blog"
+weight = 3
+url = "/posts/"
+[[menu.main]]
+name = "About"
+identifier = "about"
+weight = 4
+url = "/About/"
+[[menu.main]]
+name = "Tags"
+identifier = "tags"
+weight = 5
+url = "/tags/"
