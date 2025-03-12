@@ -99,9 +99,12 @@ h1, h2, h3 {
         opacity: 0.7; }
 
 .copyright {
-  font-size: 14px;
-  text-align: center; }
-
+  margin-left: 30px;
+  font-size: 14px; }
+  @media (min-width: 767px) {
+    .copyright {
+      width: 100%;
+      margin-left: 30; } }
 a {
   color: var(--highlight-color);
   text-decoration: none; }
