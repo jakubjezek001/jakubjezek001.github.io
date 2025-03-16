@@ -15,8 +15,8 @@ min = "0.55.0"
 [params]
 google_analytics_id = "G-3FZZVWBN4G"
 twitter_handle = "@JakubJezek3"
-showAuthorOnHomepage = true
-showAuthorOnPosts = false
+showAuthorOnHomepage = false
+showAuthorOnPosts = true
 # showIntroContentOnHomepage = true
 showPostsOnHomepage = true
 usePaginationOnHomepage = false
@@ -35,9 +35,16 @@ googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&
 fontFamilyHeading = "Poppins"
 fontFamilyParagraph = "Helvetica"
 fontFamilyMonospace = "monospace"
+showtoc = true
+tocopen = false
+TocSide = 'right'
+ShowReadingTime = true
+ShowWordCount = true
+ShowShareButtons = true
+ShowCodeCopyButtons = true
 
 [params.footer]
-copyright_text = "© 2024 Jakub Jezek"
+copyright_text = "© 2025 The Streamlighter"
 
 [params.logo]
 mobile = "/images/logo-mobile.svg"

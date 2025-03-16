@@ -12,6 +12,11 @@
       {{ end }}
     </div>
     <div class="content">
+      {{- if not (.Param "hideMeta") }}
+          <div class="post-meta">
+              {{- partial "post_meta.html" . -}}
+          </div>
+      {{- end }}
       {{ .Content }}
     </div>
   </div>
