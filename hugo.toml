@@ -1,7 +1,7 @@
 baseURL = "/"
 theme = "hugo-winston-theme"
 languageCode = "en-us"
-title = "The Streamlighter"
+title = "the streamlighter"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true

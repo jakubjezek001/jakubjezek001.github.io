@@ -2,9 +2,6 @@
 
 {{ define "main" }}
   <div class="blog">
-    {{ if .Site.Params.showAuthorOnPosts }}
-      {{ partial "author.html" . }}
-    {{ end }}
     <div class="intro">
       <h1>{{ .Title }}{{ if .Site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
       {{ if .Params.image }}
@@ -12,11 +9,9 @@
       {{ end }}
     </div>
     <div class="content">
-      {{- if not (.Param "hideMeta") }}
-          <div class="post-meta">
-              {{- partial "post_meta.html" . -}}
-          </div>
-      {{- end }}
+        {{ if .Site.Params.showAuthorOnPosts }}
+            {{ partial "author.html" . }}
+        {{ end }}
       {{ .Content }}
     </div>
   </div>
