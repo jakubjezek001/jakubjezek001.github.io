@@ -4,7 +4,7 @@
       padding-top: 40px;
     }
   }
-  
+
   .social-icon {
     margin-right: 10px;
     a {
@@ -17,4 +17,13 @@
       }
     }
   }
-  
+
+  .copyright {
+    margin-left: 30px;
+    // dynamic width based on content and screen size
+    @include breakpoint('small') {
+      width: 100%;
+      margin-left: 30;
+    }
+    font-size: 14px;
+  }

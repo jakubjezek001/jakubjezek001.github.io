@@ -4,7 +4,7 @@
   align-items: center;
   margin-bottom: 30px;
   font-size: 20px;
-  @include breakpoint('small') {
+  @include breakpoint("small") {
     padding-bottom: 5px;
     margin-bottom: 40px;
   }
@@ -15,12 +15,28 @@
   }
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+
+.title span {
+  margin-left: 10px;
+  color: var(--highlight-color);
+  font-family: var(--font-family-heading);
+}
 
 .hamburger-trigger {
   height: 30px;
   display: flex;
   align-items: center;
-  @include breakpoint('medium') {
+  @include breakpoint("medium") {
     display: none;
   }
 }
@@ -41,7 +57,7 @@
   color: var(--highlight-color);
   &:before,
   &:after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 2px;

@@ -29,6 +29,16 @@ $breakpoints: (
 @import 'main-menu-mobile';
 @import 'pygments/github';
 
+// Bootstrap
+@import 'bootstrap-variables';
+@import 'bootstrap/bootstrap-reboot';
+@import 'bootstrap/bootstrap-grid';
+@import 'bootstrap/bootstrap-utilities';
+@import 'bootstrap/tables';
+
+// Components
+@import 'components/logo';
+
 html, body {
   box-sizing: border-box;
 }

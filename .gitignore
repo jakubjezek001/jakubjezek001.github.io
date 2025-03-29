@@ -6,5 +6,5 @@ public/
 python/.env
 
 python/.python-version
-
-python/.venv/
+.python-version
+.venv
