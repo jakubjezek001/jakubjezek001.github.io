@@ -4,7 +4,8 @@ slug: 4e9a8858bd25484285a1ec6e84be49bv
 tags:
   - AYON
   - post-production
-  - optimalisation
+  - pipeline-automation
+
 date: 2025-03-16T16:45:04+01:00
 draft: false
 ---
@@ -54,7 +55,7 @@ I once offered to script solutions for our delivery challenges, but on fast-turn
 
 ## Rethinking the Pipeline Approach
 
-This frustration was one of the driving forces behind creating AYON Batch delivery tools add-on. Having lived through the pain of manual delivery workflows, we built an offloaded processing system that breaks these complex tasks into smaller components that can be managed by a render farm rather than tying up artists' workstations.
+This frustration was one of the driving forces behind creating  [AYON](https://ynput.io/ayon/?utm_source=thestreamlighter.com&utm_medium=third-party-blog&utm_campaign=delivery&utm_content=mention) Batch delivery tools add-on. Having lived through the pain of manual delivery workflows, we built an offloaded processing system that breaks these complex tasks into smaller components that can be managed by a render farm rather than tying up artists' workstations.
 
 AYON's Batch delivery tools add-on specifically addresses these delivery challenges by automating:
 
@@ -65,7 +66,7 @@ AYON's Batch delivery tools add-on specifically addresses these delivery challen
 
 The system is flexible enough to adapt to any project's technical specifications through an event-based workflow that provides comprehensive control over delivery processes.
 
-But honestly, whether you use AYON or develop your own solution, the critical realization is that delivery automation shouldn't be a luxury—it's an economic necessity for studios that want to remain profitable.
+But honestly, whether you use  [AYON](https://ynput.io/ayon/?utm_source=thestreamlighter.com&utm_medium=third-party-blog&utm_campaign=delivery&utm_content=mention) or develop your own solution, the critical realization is that delivery automation shouldn't be a luxury—it's an economic necessity for studios that want to remain profitable.
 
 ## A New Perspective on Pipeline Investment
 
@@ -84,6 +85,6 @@ The VFX industry prides itself on technological innovation, yet many of our busi
 
 I don't claim to have all the answers. Every studio has unique workflows and challenges. But I do know that continuing to sacrifice our best creative talent to manual data management is unsustainable—financially, creatively, and humanly.
 
-Whether through custom-developed solutions, integrated pipeline tools like AYON, or a fundamental rethinking of how we budget for technical processes, something needs to change.
+Whether through custom-developed solutions, integrated pipeline tools like  [AYON](https://ynput.io/ayon/?utm_source=thestreamlighter.com&utm_medium=third-party-blog&utm_campaign=delivery&utm_content=mention), or a fundamental rethinking of how we budget for technical processes, something needs to change.
 
 Because at 3 AM in a studio somewhere, right now, there's an artist who should be creating magic but is instead renaming files and configuring burn-ins. And that's not just a workflow problem—it's a waste of human potential.

@@ -4,8 +4,8 @@ slug: 4e9a8858b225484285a17c6e84be49bv
 tags:
   - AYON
   - studio-funding
-  - optimalisation
-date: 2025-03-16T16:45:04+01:00
+  - pipeline-efficiency
+date: 2025-04-11T12:13:02+01:00
 draft: false
 ---
 
@@ -53,7 +53,7 @@ Struggling studios operate in a perpetual state of emergency. Artists work overt
 
 One Prague-based studio I worked with became legendary for paying freelancer invoices within two days—unheard of in an industry where 60+ day payment terms are common. Their secret wasn't greater revenue; it was conscious financial division creating predictability and stability.
 
-This financial architecture extended to their pipeline investment as well. Rather than viewing pipeline automation as a cost center, they saw it as a competitive advantage that paid dividends with each new project. Tools like AYON have transformed this equation for smaller studios by offering modular, subscription-based solutions that can scale with project demands, converting what was once a massive capital investment into manageable operational expenses.
+This financial architecture extended to their pipeline investment as well. Rather than viewing pipeline automation as a cost center, they saw it as a competitive advantage that paid dividends with each new project. Tools like  [AYON](https://ynput.io/ayon/?utm_source=thestreamlighter.com&utm_medium=third-party-blog&utm_campaign=funding&utm_content=mention) have transformed this equation for smaller studios by offering modular, subscription-based solutions that can scale with project demands, converting what was once a massive capital investment into manageable operational expenses.
 
 # The Freelancer's Perspective on Studio Health
 
@@ -71,7 +71,7 @@ I'm not suggesting there's a one-size-fits-all approach to studio financial mana
 
 However, the fundamental principle holds: separate your financial thinking. Create distinct budgetary tracks for studio infrastructure and project execution.
 
-For smaller studios just beginning this transition, solutions like AYON offer a middle path—providing enterprise-grade pipeline frameworks through subscription models that can align with project budgets while still creating the separation needed for sustainable growth. Their community-supported approach also means smaller studios can leverage collective knowledge without maintaining large R&D departments.
+For smaller studios just beginning this transition, solutions like [AYON](https://ynput.io/ayon/?utm_source=thestreamlighter.com&utm_medium=third-party-blog&utm_campaign=funding&utm_content=mention) offer a middle path—providing enterprise-grade pipeline frameworks through subscription models that can align with project budgets while still creating the separation needed for sustainable growth. Their community-supported approach also means smaller studios can leverage collective knowledge without maintaining large R&D departments.
 
 The VFX industry has always operated on tight margins. That won't change overnight. But we can change how we structure our financial thinking to create sustainability within those constraints.
 
