@@ -18,7 +18,7 @@ I remember the night vividly. It was 3 AM, the office eerily quiet except for th
 
 And the kicker? This work wasn't even budgeted for.
 
-In the glamorous world of visual effects, we love to talk about groundbreaking techniques and stunning visuals. ==What we don't discuss nearly enough is how inefficient delivery processes are quietly bankrupting studios and burning out our best talent.==
+In the glamorous world of visual effects, we love to talk about groundbreaking techniques and stunning visuals. What we don't discuss nearly enough is how inefficient delivery processes are quietly bankrupting studios and burning out our best talent.
 
 ## The Delivery Data Round-Trip: A Hidden Time Sink
 
@@ -51,7 +51,7 @@ Part of the problem is that delivery workflows require deep technical understand
 
 I once offered to script solutions for our delivery challenges, but on fast-turnaround, under-budgeted projects, there's "never time" to implement automation. Of course, there's always time to have a senior artist work overtime handling these tasks manually—a paradox that would be laughable if it weren't so painfully common.
 
-==The true cost of manual delivery processes isn't just the time spent on them—it's the opportunity cost of all the creative work that isn't happening while your best people are managing data.==
+The true cost of manual delivery processes isn't just the time spent on them—it's the opportunity cost of all the creative work that isn't happening while your best people are managing data.
 
 ## Rethinking the Pipeline Approach
 
@@ -74,7 +74,7 @@ Think about it this way: if your highest-paid artists are spending 20-40% of the
 
 Not only would they produce more creative work, but they'd experience less burnout, make fewer costly mistakes, and likely stay with your studio longer. The ROI on automating these processes isn't just about efficiency—it's about talent retention and creative quality.
 
-In the past, pipeline development was seen as a cost center, a necessary evil to keep productions running. ==Today, smart studios are recognizing that thoughtful pipeline automation is actually a competitive advantage that directly impacts the bottom line.==
+In the past, pipeline development was seen as a cost center, a necessary evil to keep productions running. Today, smart studios are recognizing that thoughtful pipeline automation is actually a competitive advantage that directly impacts the bottom line.
 
 But this requires a shift in budgeting mindset. Studios need to allocate resources specifically for delivery workflow development, rather than treating it as an afterthought or assuming artists can handle it manually "just this once" (which inevitably becomes "just every time").
 

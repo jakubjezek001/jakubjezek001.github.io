@@ -15,7 +15,7 @@ I'll never forget walking into a once-promising VFX studio to find sleep-deprive
 
 This wasn't just bad luck. It was a structural failure that plagues countless digital post-production studios.
 
-==At the heart of most struggling VFX studios lies a fundamental misunderstanding: treating infrastructure investments as project expenses rather than capital investments.== This conflation isn't just an accounting technicality—it's slowly killing studios and burning out artists.
+At the heart of most struggling VFX studios lies a fundamental misunderstanding: treating infrastructure investments as project expenses rather than capital investments. This conflation isn't just an accounting technicality—it's slowly killing studios and burning out artists.
 
 # The Project-to-Project Prisoner's Dilemma
 
@@ -49,7 +49,7 @@ Consider the contrast in production environments:
 
 Struggling studios operate in a perpetual state of emergency. Artists work overtime on outdated equipment because "we'll upgrade next quarter." Teams manually perform repetitive tasks because "we don't have time to automate right now." These are symptoms of merged budget thinking.
 
-==Thriving studios create breathing room for sustainable growth. They can upgrade incrementally because infrastructure isn't competing with payroll for the same dollars. They can automate workflows because they've budgeted for pipeline development regardless of current project loads.==
+Thriving studios create breathing room for sustainable growth. They can upgrade incrementally because infrastructure isn't competing with payroll for the same dollars. They can automate workflows because they've budgeted for pipeline development regardless of current project loads.
 
 One Prague-based studio I worked with became legendary for paying freelancer invoices within two days—unheard of in an industry where 60+ day payment terms are common. Their secret wasn't greater revenue; it was conscious financial division creating predictability and stability.
 
