@@ -48,7 +48,7 @@ copyright_text = "© 2025 The Streamlighter"
 
 [params.logo]
 mobile = "/images/logo-mobile.svg"
-standard = "/images/logo.svg"
+standard = "/images/logo_with_text.svg"
 
 # markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
