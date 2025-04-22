@@ -1,6 +1,6 @@
 ---
 title: The Hidden Cost of Digital Delivery
-slug: 4e9a8858bd25484285a1ec6e84be49bv
+slug: the-hidden-cost-of-digital-delivery
 tags:
   - AYON
   - post-production

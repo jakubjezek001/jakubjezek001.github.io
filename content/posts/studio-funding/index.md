@@ -1,6 +1,6 @@
 ---
 title: The Dangerous Delusion of Project-Based Studio Funding
-slug: 4e9a8858b225484285a17c6e84be49bv
+slug: studio-funding-delusion
 tags:
   - AYON
   - studio-funding

@@ -13,6 +13,8 @@
             {{ partial "author.html" . }}
         {{ end }}
       {{ .Content }}
+      <hr />
+      <p class="blog-attribution">The post <a href="{{ .RelPermalink }}">{{ .Title }}</a> appeared first on <a href="{{ .Site.BaseURL }}">The Streamlighter</a></p>
     </div>
   </div>
 {{ end }}
