@@ -8,3 +8,7 @@ python/.env
 python/.python-version
 .python-version
 .venv
+
+# OS / editor files
+.DS_Store
+Thumbs.db
