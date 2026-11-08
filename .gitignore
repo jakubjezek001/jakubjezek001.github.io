@@ -12,3 +12,9 @@ python/.python-version
 # OS / editor files
 .DS_Store
 Thumbs.db
+
+# Hugo image cache (social cards, resized images) from local builds
+resources/_gen/images/
+
+# OpenKnowledge per-machine state
+.ok/local/

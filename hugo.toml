@@ -1,26 +1,37 @@
-baseURL = "/"
+baseURL = "https://thestreamlighter.com/"
 theme = "hugo-winston-theme"
-languageCode = "en-us"
+locale = "en-US"
 title = "the streamlighter"
 
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsUseClasses = true
+enableRobotsTXT = true
+# Last-modified dates come from git (CI checks out the full history).
+enableGitInfo = true
 
 [module]
 [module.hugoVersion]
 extended = true
-min = "0.55.0"
+min = "0.146.0"
+
+# Project assets, plus static/images exposed to Hugo's image processing
+# (author photo resized for the byline, images for social cards).
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "static/images"
+target = "assets/images"
 
 [params]
+# Used for the home page meta description and as fallback for pages without one.
+# TODO(Jakub): rewrite in your own words.
+description = "Jakub Ježek writes about VFX and post-production pipelines, AYON and automation."
 google_analytics_id = "G-3FZZVWBN4G"
 twitter_handle = "@JakubJezek3"
 showAuthorOnHomepage = false
 showAuthorOnPosts = true
-# showIntroContentOnHomepage = true
 showPostsOnHomepage = true
 usePaginationOnHomepage = false
-limitPostsOnHomepage = 2                                                                      # only used if usePaginationOnHomepage is false
+limitPostsOnHomepage = 2 # only used if usePaginationOnHomepage is false
 sortPostsByDateOldestFirst = false
 addDot = true
 addFrame = false
@@ -30,33 +41,78 @@ baseOffsetColor = "#eaeaea"
 headingColor = "#1c1b1d"
 textColor = "#4e5157"
 dotColor = "#1de9b6"
-enableGoogleFonts = true
-googleFontsUrl = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-fontFamilyHeading = "Poppins"
-fontFamilyParagraph = "Helvetica"
-fontFamilyMonospace = "monospace"
-showtoc = true
-tocopen = false
-TocSide = 'right'
+# Poppins is self-hosted from static/fonts (see assets/css/extended/site.css),
+# so no request goes to Google Fonts.
+enableGoogleFonts = false
+fontFamilyHeading = "Poppins, 'Helvetica Neue', Arial, sans-serif"
+fontFamilyParagraph = "'Helvetica Neue', Helvetica, Arial, sans-serif"
+fontFamilyMonospace = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 ShowReadingTime = true
 ShowWordCount = true
-ShowShareButtons = true
-ShowCodeCopyButtons = true
 
 [params.footer]
-copyright_text = "© 2025 The Streamlighter"
+copyright_text = "The Streamlighter" # rendered as "© <current year> The Streamlighter"
 
 [params.logo]
 mobile = "/images/logo-mobile.svg"
 standard = "/images/logo.svg"
 
-# markdown config settings https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
+[markup.highlight]
+noClasses = false
+guessSyntax = true
 [markup.goldmark]
 [markup.goldmark.renderer]
 hardWraps = false
 unsafe = true
 xhtml = false
+# Relative links to other posts written for OpenKnowledge/GitHub,
+# e.g. [text](../other-post/index.md), resolve to the published URL.
+[markup.goldmark.renderHooks.link]
+useEmbedded = "fallback"
+
+# /llms.txt: a plain-text index of the posts for AI assistants.
+[outputFormats.llms]
+mediaType = "text/plain"
+baseName = "llms"
+isPlainText = true
+notAlternative = true
+
+[outputs]
+home = ["html", "rss", "llms"]
+
+# Only tags are used (no categories).
+[taxonomies]
+tag = "tags"
+
+# The projects section still holds placeholder pages from an old theme.
+# Keep it out of the build (pages, sitemap, RSS) until real projects exist.
+[[cascade]]
+[cascade.build]
+list = "never"
+render = "never"
+publishResources = false
+[cascade.target]
+path = "{/projects,/projects/**}"
+
+# content/pages/ only holds standalone pages (About); its list page is not needed.
+[[cascade]]
+[cascade.build]
+list = "local"
+render = "never"
+[cascade.target]
+path = "/pages"
+kind = "section"
+
+# Single-tag pages are thin duplicates of the post list: keep them for
+# navigation but out of search results and the sitemap.
+[[cascade]]
+[cascade.params]
+robots = "noindex, follow"
+[cascade.sitemap]
+disable = true
+[cascade.target]
+kind = "term"
 
 [menu]
 [[menu.main]]
@@ -78,7 +134,7 @@ url = "/posts/"
 name = "About"
 identifier = "about"
 weight = 4
-url = "/About/"
+url = "/about/"
 [[menu.main]]
 name = "Tags"
 identifier = "tags"

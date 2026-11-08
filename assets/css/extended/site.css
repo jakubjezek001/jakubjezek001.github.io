@@ -1,0 +1,139 @@
+/* Site overrides on top of the vendored Winston theme. Loaded after the theme CSS. */
+
+/* ---- Fonts: Poppins, self-hosted (SIL OFL, see /fonts/OFL.txt) ---- */
+@font-face {
+  font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("/fonts/poppins-latin-400-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("/fonts/poppins-latin-ext-400-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("/fonts/poppins-latin-700-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("/fonts/poppins-latin-ext-700-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ---- Tokens ---- */
+:root {
+  /* The brand teal (#1de9b6) is too light for text on white (1.6:1).
+     Text links use a darker teal (5.3:1); the bright one stays for accents. */
+  --link-color: #00796b;
+  --muted-color: #6c757d;
+  --menu-text-color: #0d2b25;
+  --code-bg: #f5f5f5;
+  --code-text: #24292e;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --base-color: #141517;
+    --base-offset-color: #2a2c30;
+    --heading-color: #f2f2f2;
+    --text-color: #c9ccd1;
+    --link-color: #1de9b6;
+    --muted-color: #9aa0a6;
+    --code-bg: #1e2024;
+    --code-text: #e6e6e6;
+    color-scheme: dark;
+  }
+  .footer-social img { filter: invert(1); }
+  .content img { opacity: .92; }
+}
+
+/* ---- Base ---- */
+a { color: var(--link-color); }
+.title, .title:hover { text-decoration: none; }
+.title span { color: var(--highlight-color); }
+::selection { background: var(--highlight-color); color: #0d2b25; }
+:focus-visible { outline: 2px solid var(--link-color); outline-offset: 3px; border-radius: 2px; }
+body.lock-scroll { overflow: hidden; }
+
+.skip-link {
+  position: absolute; left: 16px; top: -100px; z-index: 200;
+  padding: 8px 14px; background: var(--heading-color); color: var(--base-color);
+  font-family: var(--font-family-heading); text-decoration: none;
+}
+.skip-link:focus { top: 16px; }
+
+/* Mobile menu: dark text on the teal panel (white on teal was 1.6:1) */
+.menu-main-mobile ul li a { color: var(--menu-text-color); }
+.hamburger.is-active { color: var(--menu-text-color); }
+
+/* Byline */
+.meta-item * { color: var(--muted-color); }
+.author img { border-color: var(--base-offset-color); object-fit: cover; }
+
+/* ---- Post pages: comfortable line length ---- */
+.page-blog-single .content,
+.page-blog-single .post-nav { max-width: 720px; }
+.page-blog-single .intro h1 { width: auto; max-width: 900px; }
+
+.intro .subtitle {
+  margin-top: -10px;
+  color: var(--text-color);
+  font-family: var(--font-family-heading);
+}
+
+.content a {
+  color: var(--link-color);
+  text-decoration-color: var(--highlight-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.content ul li, .content ol li { line-height: 1.6; }
+.content h1, .content h2, .content h3 { scroll-margin-top: 24px; }
+.content h2:first-of-type { margin-top: 30px; }
+.content blockquote p { color: var(--text-color); }
+
+.content table { width: 100%; border-collapse: collapse; margin: 0 0 24px; font-size: 16px; display: block; overflow-x: auto; }
+.content th, .content td { padding: 8px 12px; border-bottom: 1px solid var(--base-offset-color); text-align: left; }
+
+.content code { font-size: .9em; background: var(--code-bg); color: var(--code-text); padding: .1em .35em; border-radius: 3px; }
+.content pre code { background: none; padding: 0; font-size: inherit; }
+.content .highlight pre, .content pre { background: var(--code-bg); color: var(--code-text); border-radius: 3px; padding: 20px; overflow-x: auto; font-size: 14px; line-height: 1.5; }
+
+/* Heading links (#), visible on hover/focus */
+.heading-anchor {
+  margin-left: .35em; color: var(--highlight-color);
+  text-decoration: none !important; opacity: 0; transition: opacity .15s;
+}
+.heading-anchor::after { content: "#"; }
+.content h2:hover .heading-anchor, .content h3:hover .heading-anchor,
+.content h4:hover .heading-anchor, .heading-anchor:focus { opacity: 1; }
+
+/* Older / newer post links */
+.post-nav {
+  display: flex; justify-content: space-between; gap: 24px;
+  margin: 60px 0 20px; padding-top: 30px; border-top: 1px solid var(--base-offset-color);
+}
+.post-nav a { display: flex; flex-direction: column; max-width: 48%; text-decoration: none; }
+.post-nav a:hover .post-nav-title { text-decoration: underline; text-decoration-color: var(--highlight-color); }
+.post-nav-newer { margin-left: auto; text-align: right; }
+.post-nav-label { font-size: 14px; color: var(--muted-color); text-transform: uppercase; letter-spacing: .06em; }
+.post-nav-title { font-family: var(--font-family-heading); font-weight: 700; color: var(--heading-color); line-height: 1.3; margin-top: 4px; }
+
+/* Post pages: less empty space between the title block and the byline */
+.page-blog-single .intro { margin-bottom: 20px; }
+
+/* Cookie banner: buttons in the darker teal (white on #23A988 was 3:1) */
+html #silktide-wrapper { --primaryColor: #00796b; --cookieIconColor: #00796b; }
+
+/* Footer */
+.footer-social { display: flex; flex-wrap: wrap; align-items: center; row-gap: 12px; }
+.rss-link { font-size: 14px; font-weight: bold; color: var(--muted-color); text-decoration: none; }
+.copyright { color: var(--muted-color); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,61 @@
+{{- /*
+Returns the image for og:image / twitter:image as a dict {url, width, height}.
+Order: front matter `image` -> an image in the post bundle whose name starts
+with cover, feature or social -> the first image in the bundle -> a 1200x630
+card generated with the page title.
+*/ -}}
+{{- $result := dict -}}
+{{- $res := "" -}}
+
+{{- with .Params.image -}}
+  {{- with $.Resources.Get . }}{{ $res = . }}{{ else }}{{ with resources.Get . }}{{ $res = . }}{{ else }}{{ $result = dict "url" (. | absURL) }}{{ end }}{{ end -}}
+{{- end -}}
+
+{{- if and (not $res) (not $result.url) -}}
+  {{- with .Resources.GetMatch "{cover,feature,social}*.{png,jpg,jpeg,webp}" }}{{ $res = . }}{{ else }}{{ with index (.Resources.ByType "image") 0 }}{{ $res = . }}{{ end }}{{ end -}}
+{{- end -}}
+
+{{- /* Images under 600px wide look poor as large link previews: use the generated card. */ -}}
+{{- if and $res (in (slice "jpeg" "png" "webp") $res.MediaType.SubType) (lt $res.Width 600) (not $.Params.image) }}{{ $res = "" }}{{ end -}}
+
+{{- with $res -}}
+  {{- if in (slice "jpeg" "png" "webp") .MediaType.SubType -}}
+    {{- $img := . -}}
+    {{- if gt .Width 1200 }}{{ $img = .Resize "1200x" }}{{ end -}}
+    {{- $result = dict "url" $img.Permalink "width" $img.Width "height" $img.Height -}}
+  {{- else -}}
+    {{- $result = dict "url" .Permalink -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $result.url -}}
+  {{- $base := resources.Get "images/og-base.png" -}}
+  {{- $logo := resources.Get "images/logo.png" -}}
+  {{- $bold := resources.Get "fonts/Poppins-Bold.ttf" -}}
+  {{- $regular := resources.Get "fonts/Poppins-Regular.ttf" -}}
+  {{- if and $base $logo $bold $regular -}}
+    {{- $title := .Title -}}
+    {{- if .IsHome }}{{ $title = site.Title }}{{ end -}}
+    {{- /* Wrap the title by hand (the text filter has no right margin): try 64px, then smaller sizes, until it fits in 3 lines. */ -}}
+    {{- $size := 64 }}{{ $text := $title }}{{ $done := false -}}
+    {{- range slice (slice 64 27) (slice 56 31) (slice 48 36) -}}
+      {{- if not $done -}}
+        {{- $max := index . 1 }}{{ $lines := slice }}{{ $line := "" -}}
+        {{- range split $title " " -}}
+          {{- if and $line (gt (add (len $line) (len .) 1) $max) }}{{ $lines = $lines | append $line }}{{ $line = . }}{{ else }}{{ $line = strings.TrimSpace (printf "%s %s" $line .) }}{{ end -}}
+        {{- end -}}
+        {{- $lines = $lines | append $line -}}
+        {{- $size = index . 0 }}{{ $text = delimit $lines "\n" -}}
+        {{- if le (len $lines) 3 }}{{ $done = true }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $card := $base | images.Filter
+        (images.Overlay ($logo.Resize "120x") 72 60)
+        (images.Text $text (dict "font" $bold "size" $size "color" "#1c1b1d" "x" 80 "y" 220 "linespacing" 14))
+        (images.Text (strings.TrimSuffix "/" (strings.TrimPrefix "https://" site.Home.Permalink)) (dict "font" $regular "size" 28 "color" "#4e5157" "x" 80 "y" 540))
+    -}}
+    {{- $result = dict "url" $card.Permalink "width" $card.Width "height" $card.Height -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $result -}}

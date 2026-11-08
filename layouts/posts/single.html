@@ -1,0 +1,52 @@
+{{ define "body_classes" }}page-blog-single{{ end }}
+
+{{ define "main" }}
+{{- /*
+  Posts start with "# Title" in the markdown (so the file reads well in
+  OpenKnowledge/GitHub). The page already shows the front matter title as its
+  <h1>, so the first body <h1> is removed here. If it says more than the
+  title, the extra part is shown as a subtitle.
+*/ -}}
+{{- $content := .Content -}}
+{{- $subtitle := "" -}}
+{{- $h1re := `(?s)<h1[^>]*>(.*?)</h1>` -}}
+{{- with findRESubmatch $h1re $content 1 -}}
+  {{- $h1 := index (index . 0) 1 | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- $title := $.Title | markdownify | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- $content = replaceRE $h1re "" $content 1 -}}
+  {{- if ne (lower $h1) (lower $title) -}}
+    {{- $subtitle = strings.TrimPrefix $title $h1 | strings.TrimLeft " :–—-" | strings.TrimSpace -}}
+  {{- end -}}
+{{- end }}
+  <article class="blog">
+    <div class="intro">
+      <h1>{{ .Title }}{{ if site.Params.addDot }}<span class="dot">.</span>{{ end }}</h1>
+      {{- with $subtitle }}
+      <p class="subtitle">{{ . }}</p>
+      {{- end }}
+      {{- with .Params.image }}
+      <img alt="{{ $.Params.imageAltAttribute | default "" }}" src="{{ . | relURL }}">
+      {{- end }}
+    </div>
+    <div class="content">
+      {{- if site.Params.showAuthorOnPosts }}
+        {{ partial "author.html" . }}
+      {{- end }}
+      {{ $content | safeHTML }}
+    </div>
+
+    {{- $posts := where site.RegularPages "Section" "posts" -}}
+    {{- $older := first 1 (where $posts "Date" "lt" .Date).ByDate.Reverse -}}
+    {{- $newer := first 1 (where $posts "Date" "gt" .Date).ByDate -}}
+    {{- if or $older $newer }}
+    <nav class="post-nav" aria-label="More posts">
+      {{- range $older }}
+      <a class="post-nav-older" href="{{ .RelPermalink }}" rel="prev"><span class="post-nav-label">Older</span><span class="post-nav-title">{{ .Title }}</span></a>
+      {{- end }}
+      {{- range $newer }}
+      <a class="post-nav-newer" href="{{ .RelPermalink }}" rel="next"><span class="post-nav-label">Newer</span><span class="post-nav-title">{{ .Title }}</span></a>
+      {{- end }}
+    </nav>
+    {{- end }}
+  </article>
+{{ end }}

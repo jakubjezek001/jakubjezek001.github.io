@@ -1,0 +1,15 @@
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+Author: {{ hugo.Data.author.name }} ({{ "about/" | absURL }})
+
+## Posts
+{{ range (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}) ({{ .Date.Format "2006-01-02" }}){{ with .Description }}: {{ . }}{{ end }}
+{{- end }}
+
+## Feeds
+
+- RSS: {{ with site.GetPage "/posts" }}{{ with .OutputFormats.Get "rss" }}{{ .Permalink }}{{ end }}{{ end }}
+- Sitemap: {{ "sitemap.xml" | absURL }}

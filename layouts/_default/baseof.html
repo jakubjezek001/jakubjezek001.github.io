@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ if .IsHome }}{{ site.Title }} - {{ hugo.Data.author.name }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}{{ end }}</title>
+  <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
+  <link rel="apple-touch-icon" href="{{ "favicon.png" | relURL }}">
+  <link rel="preload" href="{{ "fonts/poppins-latin-700-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141517" media="(prefers-color-scheme: dark)">
+
+  {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+    {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
+    {{ $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+    <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
+    <link rel="stylesheet" href="{{ ($extended | minify | fingerprint).RelPermalink }}">
+  {{- else }}
+    {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
+    {{ $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" }}
+    <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+    <link rel="stylesheet" href="{{ ($extended).RelPermalink }}">
+  {{- end }}
+
+  {{ partial "seo.html" . }}
+
+  {{ partial "extend-head.html" . }}
+</head>
+
+{{ $themeStyle := slice "" }}
+{{ if eq site.Params.addFrame true }}{{ $themeStyle = $themeStyle | append "frame" }}{{ end }}
+
+<body class='page{{ delimit $themeStyle " " }} {{ block "body_classes" . }}{{ end }}'>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "menu-main-mobile.html" . }}
+  <div id="wrapper" class="wrapper">
+    {{ partial "header.html" . }}
+    <main id="main">
+    {{ block "main" . }}
+    {{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+
+  {{ $js := resources.Get "js/scripts.js" }}
+  {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+    <script src="{{ ($js | minify | fingerprint).RelPermalink }}" defer></script>
+  {{ else }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
+  {{ end }}
+
+  {{ block "footer_js" . }}
+  {{ end }}
+
+  {{ partial "google-analytics.html" . }}
+  {{ partial "extend-footer.html" . }}
+
+</body>
+</html>
