@@ -1,0 +1,22 @@
+# .okignore: paths OpenKnowledge leaves out of its document index
+# (gitignore syntax). Only hand-written markdown is in scope: content/, docs/,
+# AGENTS.md, README.md.
+
+# Hugo: build output, generated cache, vendored theme, templates, assets
+public/
+resources/
+themes/
+layouts/
+assets/
+static/
+archetypes/
+data/
+i18n/
+
+# Tooling
+python/
+.github/
+.claude/
+.codex/
+.opencode/
+.pi/

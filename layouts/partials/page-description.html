@@ -1,0 +1,16 @@
+{{- /*
+Plain-text description of a page: front matter `description`, else the first
+~160 characters of the body (without the "# Title" line posts start with and
+without headings), else the site description.
+*/ -}}
+{{- $d := "" -}}
+{{- with .Description -}}
+  {{- $d = . -}}
+{{- else -}}
+  {{- if .IsPage -}}
+    {{- $d = .Content | replaceRE `(?s)<h1[^>]*>.*?</h1>` "" | replaceRE `(?s)<h[2-6][^>]*>.*?</h[2-6]>` " " | plainify | htmlUnescape -}}
+    {{- $d = replaceRE `\s+` " " $d | strings.TrimSpace | truncate 160 -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $d }}{{ $d = site.Params.description }}{{ end -}}
+{{- return $d -}}

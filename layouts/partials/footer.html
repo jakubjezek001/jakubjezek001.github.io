@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="footer-social">
+    {{- range hugo.Data.social.links }}
+    <span class="social-icon social-icon-{{ .name | urlize }}">
+      <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="me noopener">
+        <img src="{{ .image | relURL }}" width="24" height="24" alt="{{ .name }}">
+      </a>
+    </span>
+    {{- end }}
+    {{- with site.GetPage "/posts" }}{{ with .OutputFormats.Get "rss" }}
+    <span class="social-icon social-icon-rss">
+      <a href="{{ .RelPermalink }}" title="RSS feed" class="rss-link">RSS</a>
+    </span>
+    {{- end }}{{ end }}
+    {{- with site.Params.footer.copyright_text }}
+    <span class="copyright">© {{ now.Year }} {{ . }}</span>
+    {{- end }}
+  </div>
+</footer>

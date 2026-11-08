@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Blog post front matter (content/posts/<slug>/index.md)",
+  "description": "Matches the post format in AGENTS.md. Hugo reads these fields.",
+  "type": "object",
+  "required": ["title", "slug", "description", "tags", "date", "draft"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1, "maxLength": 90, "description": "Plain title. Also used on the social card." },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "kebab-case; becomes /posts/<slug>/. Do not change after publishing (add the old URL to aliases instead)." },
+    "description": { "type": "string", "minLength": 50, "maxLength": 170, "description": "One sentence. Shown in lists and used as the search/social description (about 150-160 characters)." },
+    "tags": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+    "date": { "type": ["string", "object"], "description": "Publish date, e.g. 2026-11-10T09:00:00+01:00" },
+    "lastmod": { "type": ["string", "object"] },
+    "draft": { "type": "boolean", "description": "Stays true until Jakub publishes (AGENTS.md, Rule 1)." },
+    "image": { "type": "string", "description": "Optional social/hero image, a file next to index.md. Without it a title card is generated." },
+    "imageAltAttribute": { "type": "string" },
+    "aliases": { "type": "array", "items": { "type": "string", "pattern": "^/" }, "description": "Old URLs that should redirect here." }
+  },
+  "additionalProperties": true
+}

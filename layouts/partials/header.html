@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header-left">
+    <div class="logo">
+      <a href="{{ "/" | relURL }}">
+        <img width="350" height="70" alt="{{ site.Title }}" src="{{ site.Params.logo.standard | relURL }}">
+      </a>
+    </div>
+  </div>
+  <nav class="menu-main" aria-label="Main">
+    <ul>
+      {{- $currentPage := . }}
+      {{- range site.Menus.main }}
+      {{- $active := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+      {{- $active = or $active (eq (.URL | relLangURL) ($currentPage.RelPermalink | relLangURL)) }}
+      <li class="menu-item-{{ .Name | lower }}{{ if $active }} active{{ end }}">
+        <a href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Pre }}<span>{{ .Name }}</span></a>
+      </li>
+      {{- end }}
+    </ul>
+  </nav>
+  <div id="toggle-menu-main-mobile" class="hamburger-trigger">
+    <button class="hamburger" type="button" aria-label="Menu" aria-controls="menu-main-mobile" aria-expanded="false">Menu</button>
+  </div>
+</header>

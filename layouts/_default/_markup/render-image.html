@@ -1,0 +1,25 @@
+{{- /*
+Markdown images. `![alt](./picture.png)` next to index.md (OpenKnowledge /
+GitHub style) resolves to the page resource. Raster images get width/height
+(no layout shift), large ones are scaled down, and all but the first are
+lazy-loaded.
+*/ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $src := .Destination -}}
+{{- $w := 0 -}}{{- $h := 0 -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path -}}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $img := . -}}
+    {{- if in (slice "jpeg" "png" "webp" "gif") .MediaType.SubType -}}
+      {{- if and (gt .Width 1600) (ne .MediaType.SubType "gif") }}{{ $img = .Resize "1600x" }}{{ end -}}
+      {{- $w = $img.Width }}{{ $h = $img.Height -}}
+    {{- end -}}
+    {{- $src = $img.RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ .PlainText }}"
+  {{- with .Title }} title="{{ . }}"{{ end }}
+  {{- if $w }} width="{{ $w }}" height="{{ $h }}"{{ end }}
+  {{- if eq .Ordinal 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }} decoding="async">
+{{- /**/ -}}
