@@ -1,0 +1,68 @@
+{{- /*
+Cookie consent (Silktide) + Google Consent Mode v2.
+Analytics storage is denied until the visitor accepts, and the analytics
+checkbox is not pre-ticked. The site shows no ads, so there is no
+advertising category.
+*/ -}}
+{{- if site.Params.google_analytics_id }}
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+</script>
+{{- $consentcss := resources.Get "css/silktide-consent-manager.css" | minify | fingerprint }}
+<link rel="stylesheet" id="silktide-consent-manager-css" href="{{ $consentcss.RelPermalink }}">
+{{- $consentjs := resources.Get "js/silktide-consent-manager.js" | minify | fingerprint }}
+<script src="{{ $consentjs.RelPermalink }}"></script>
+<script>
+silktideCookieBannerManager.updateCookieBannerConfig({
+  background: { showBackground: false },
+  cookieIcon: { position: "bottomRight" },
+  cookieTypes: [
+    {
+      id: "necessary",
+      name: "Necessary",
+      description: "<p>Remembers your choice in this banner. Nothing else.</p>",
+      required: true
+    },
+    {
+      id: "analytics",
+      name: "Analytics",
+      description: "<p>Google Analytics counts visits and which posts are read. It only runs if you allow it.</p>",
+      defaultValue: false,
+      onAccept: function () {
+        gtag('consent', 'update', { analytics_storage: 'granted' });
+        dataLayer.push({ event: 'consent_accepted_analytics' });
+      },
+      onReject: function () {
+        gtag('consent', 'update', { analytics_storage: 'denied' });
+      }
+    }
+  ],
+  text: {
+    banner: {
+      description: "<p>This site uses Google Analytics to count visits, only if you allow it. No ads, no tracking across sites.</p>",
+      acceptAllButtonText: "Allow analytics",
+      acceptAllButtonAccessibleLabel: "Allow analytics cookies",
+      rejectNonEssentialButtonText: "No, thanks",
+      rejectNonEssentialButtonAccessibleLabel: "Reject analytics cookies",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Cookie preferences",
+      description: "<p>You can change this any time with the cookie icon in the bottom right corner.</p>",
+      creditLinkText: "Banner by Silktide",
+      creditLinkAccessibleLabel: "Banner by Silktide"
+    }
+  },
+  position: { banner: "bottomLeft" }
+});
+</script>
+{{- end }}
