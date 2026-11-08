@@ -1,13 +1,10 @@
 <header class="header">
   <div class="header-left">
     <div class="logo">
-      <a href="{{ "/" | relURL }}" aria-hidden="true" tabindex="-1">
-        <img width="70" height="70" alt="" src="{{ site.Params.logo.standard | relURL }}">
+      <a href="{{ "/" | relURL }}">
+        <img width="350" height="70" alt="{{ site.Title }}" src="{{ site.Params.logo.standard | relURL }}">
       </a>
     </div>
-    <a class="title" href="{{ "/" | relURL }}">
-      <span>{{ site.Title }}</span>
-    </a>
   </div>
   <nav class="menu-main" aria-label="Main">
     <ul>

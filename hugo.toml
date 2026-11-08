@@ -55,7 +55,7 @@ copyright_text = "The Streamlighter" # rendered as "© <current year> The Stream
 
 [params.logo]
 mobile = "/images/logo-mobile.svg"
-standard = "/images/logo.svg"
+standard = "/images/logo_with_text.svg"
 
 [markup]
 [markup.highlight]
