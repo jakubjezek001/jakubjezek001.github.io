@@ -51,3 +51,10 @@ draft: true
 ```
 
 The body starts with `# Title`, then `##` headings. Images sit next to `index.md` in the post folder.
+
+- The site shows the front matter `title` as the page heading and hides the body's `# Title`. If the `# Title` line says more than `title`, the extra part becomes a subtitle.
+- `description` is the search and social-preview text: one sentence, about 150 to 160 characters.
+- Link to another post with a relative path, `[text](../other-slug/index.md)`, and to an image with `![alt text](./picture.png)`. Hugo turns these into the published URLs, and they also work in OpenKnowledge and on GitHub. Always write alt text.
+- Without an `image` in the front matter, a social card with the title is generated at build time.
+- Never change the `slug` of a published post. If it must change, add the old URL to `aliases`.
+- Posts are edited in OpenKnowledge. See `docs/openknowledge.md` for the setup and its guard rails.
